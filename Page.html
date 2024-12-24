@@ -2,26 +2,22 @@
 <html lang="en">
 
 <head>
-    <script>
-        // https://pastebin.com/raw/iHdkxHa7
-    </script>
-    <link rel="icon" href="discord-avatar-512-KLE6K.png" type="image/x-icon">
-    <title>Wolf-gaut v8</title>
+    <title>Gaut Programming, LLC</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="color-scheme" content="light only" />
     <meta name="description" content="Wolf-gaut v8" />
-    <meta property="og:site_name" content="Wolf-gaut v8" />
-    <meta property="og:title" content="Wolf-gaut v8" />
+    <meta property="og:site_name" content="Wolf-gaut v8 (copy)" />
+    <meta property="og:title" content="Wolf-gaut v8 (copy)" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Wolf-gaut v8" />
-    <meta property="og:image" content="https://wolf-gautv8.carrd.co/assets/images/card.jpg?v=1c019569" />
+    <meta property="og:image" content="https://gautprogramingllc.carrd.co/assets/images/card.jpg?v=466fb82e" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="800" />
-    <meta property="og:url" content="https://wolf-gautv8.carrd.co" />
+    <meta property="og:url" content="https://gautprogramingllc.carrd.co" />
     <meta property="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://wolf-gautv8.carrd.co" />
+    <link rel="canonical" href="https://gautprogramingllc.carrd.co" />
     <style>
         html,
         body,
@@ -886,19 +882,18 @@
     <div id="wrapper">
         <div id="main">
             <div class="inner">
-                <h1 id="text01">Wolf-gaut v8</h1>
+                <h1 id="text01">Gaut Programming, LLC</h1>
                 <hr id="divider01" class="full">
-                <p id="text02"><span class="p">Wolf-Gaut v8 Is Actually under development, So There are not a lot of
-                        features but you can Actualy Use:</span><span class="p">Our <span
-                            style="color: #CCA1A1">/say</span> Commande That Can sent Anonyme message</span>
-                </p>
+                <p id="text02"><span class="p">© 2024 Gaut Global, Inc. - All rights reserved.<br /> Gaut Global, Inc.
+                        and its subsidiaries Gaut Robotics, LLC and Gaut Programming, LLC hold all intellectual property
+                        rights related to their products, services, and technologies. Any unauthorized reproduction or
+                        use of their content is strictly prohibited.</span></p>
                 <ul id="buttons01" class="buttons">
                     <li><a href="https://discord.com/oauth2/authorize?client_id=1273288626649698304&permissions=8&integration_type=0&scope=bot"
-                            class="button n01">Invite The bot</a></li>
+                            class="button n01" role="button">Invite The bot</a></li>
                 </ul>
-                <p id="text03">Wolf-gaut v8 © 2024 by <a href="https://wolfgaut.github.io/Wolf-gaut-V8/Page.html">Gaut
-                        Programming, LLC</a>.
-                    All rights reserved.</p>
+                <p id="text03">Wolf-gaut v8 © 2024 by <a href="https://wolfgaut.github.io/WolfgautBio/">Gaut
+                        Programming, LLC</a>. All rights reserved.</p>
             </div>
         </div>
     </div>
@@ -1620,99 +1615,171 @@
                         },
                     },
                     'wipe-up': {
-                        type: 'transition',
-                        transition: function (speed, delay) {
-                            return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                        type: 'animate',
+                        keyframes: function (intensity) {
+                            return [{
+                                maskSize: '100% 0%',
+                                maskImage: 'linear-gradient(90deg, black 100%, transparent 100%)',
+                            }, {
+                                maskSize: '110% 110%',
+                                maskImage: 'linear-gradient(90deg, black 100%, transparent 100%)',
+                            },];
                         },
-                        rewind: function (intensity) {
+                        options: function (speed) {
+                            return {
+                                duration: speed,
+                                iterations: 1,
+                                easing: 'ease',
+                            };
+                        },
+                        rewind: function () {
+                            this.style.opacity = 0;
                             this.style.maskComposite = 'exclude';
                             this.style.maskRepeat = 'no-repeat';
-                            this.style.maskImage = 'linear-gradient(0deg, black 100%, transparent 100%)';
                             this.style.maskPosition = '0% 100%';
-                            this.style.maskSize = '100% 0%';
                         },
                         play: function () {
-                            this.style.maskSize = '110% 110%';
+                            this.style.opacity = 1;
                         },
                     },
                     'wipe-down': {
-                        type: 'transition',
-                        transition: function (speed, delay) {
-                            return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                        type: 'animate',
+                        keyframes: function (intensity) {
+                            return [{
+                                maskSize: '100% 0%',
+                                maskImage: 'linear-gradient(90deg, black 100%, transparent 100%)',
+                            }, {
+                                maskSize: '110% 110%',
+                                maskImage: 'linear-gradient(90deg, black 100%, transparent 100%)',
+                            },];
                         },
-                        rewind: function (intensity) {
+                        options: function (speed) {
+                            return {
+                                duration: speed,
+                                iterations: 1,
+                                easing: 'ease',
+                            };
+                        },
+                        rewind: function () {
+                            this.style.opacity = 0;
                             this.style.maskComposite = 'exclude';
                             this.style.maskRepeat = 'no-repeat';
-                            this.style.maskImage = 'linear-gradient(0deg, black 100%, transparent 100%)';
                             this.style.maskPosition = '0% 0%';
-                            this.style.maskSize = '100% 0%';
                         },
                         play: function () {
-                            this.style.maskSize = '110% 110%';
+                            this.style.opacity = 1;
                         },
                     },
                     'wipe-left': {
-                        type: 'transition',
-                        transition: function (speed, delay) {
-                            return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                        type: 'animate',
+                        keyframes: function (intensity) {
+                            return [{
+                                maskSize: '0% 100%',
+                                maskImage: 'linear-gradient(90deg, black 100%, transparent 100%)',
+                            }, {
+                                maskSize: '110% 110%',
+                                maskImage: 'linear-gradient(90deg, black 100%, transparent 100%)',
+                            },];
                         },
-                        rewind: function (intensity) {
+                        options: function (speed) {
+                            return {
+                                duration: speed,
+                                iterations: 1,
+                                easing: 'ease',
+                            };
+                        },
+                        rewind: function () {
+                            this.style.opacity = 0;
                             this.style.maskComposite = 'exclude';
                             this.style.maskRepeat = 'no-repeat';
-                            this.style.maskImage = 'linear-gradient(90deg, black 100%, transparent 100%)';
                             this.style.maskPosition = '100% 0%';
-                            this.style.maskSize = '0% 100%';
                         },
                         play: function () {
-                            this.style.maskSize = '110% 110%';
+                            this.style.opacity = 1;
                         },
                     },
                     'wipe-right': {
-                        type: 'transition',
-                        transition: function (speed, delay) {
-                            return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                        type: 'animate',
+                        keyframes: function (intensity) {
+                            return [{
+                                maskSize: '0% 100%',
+                                maskImage: 'linear-gradient(90deg, black 100%, transparent 100%)',
+                            }, {
+                                maskSize: '110% 110%',
+                                maskImage: 'linear-gradient(90deg, black 100%, transparent 100%)',
+                            },];
                         },
-                        rewind: function (intensity) {
+                        options: function (speed) {
+                            return {
+                                duration: speed,
+                                iterations: 1,
+                                easing: 'ease',
+                            };
+                        },
+                        rewind: function () {
+                            this.style.opacity = 0;
                             this.style.maskComposite = 'exclude';
                             this.style.maskRepeat = 'no-repeat';
-                            this.style.maskImage = 'linear-gradient(90deg, black 100%, transparent 100%)';
                             this.style.maskPosition = '0% 0%';
-                            this.style.maskSize = '0% 100%';
                         },
                         play: function () {
-                            this.style.maskSize = '110% 110%';
+                            this.style.opacity = 1;
                         },
                     },
                     'wipe-diagonal': {
-                        type: 'transition',
-                        transition: function (speed, delay) {
-                            return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                        type: 'animate',
+                        keyframes: function (intensity) {
+                            return [{
+                                maskSize: '0% 0%',
+                                maskImage: 'linear-gradient(45deg, black 50%, transparent 50%)',
+                            }, {
+                                maskSize: '220% 220%',
+                                maskImage: 'linear-gradient(45deg, black 50%, transparent 50%)',
+                            },];
                         },
-                        rewind: function (intensity) {
+                        options: function (speed) {
+                            return {
+                                duration: speed,
+                                iterations: 1,
+                                easing: 'ease',
+                            };
+                        },
+                        rewind: function () {
+                            this.style.opacity = 0;
                             this.style.maskComposite = 'exclude';
                             this.style.maskRepeat = 'no-repeat';
-                            this.style.maskImage = 'linear-gradient(45deg, black 50%, transparent 50%)';
                             this.style.maskPosition = '0% 100%';
-                            this.style.maskSize = '0% 0%';
                         },
                         play: function () {
-                            this.style.maskSize = '220% 220%';
+                            this.style.opacity = 1;
                         },
                     },
                     'wipe-reverse-diagonal': {
-                        type: 'transition',
-                        transition: function (speed, delay) {
-                            return 'mask-size ' + speed + 's ease' + (delay ? ' ' + delay + 's' : '');
+                        type: 'animate',
+                        keyframes: function (intensity) {
+                            return [{
+                                maskSize: '0% 0%',
+                                maskImage: 'linear-gradient(135deg, transparent 50%, black 50%)',
+                            }, {
+                                maskSize: '220% 220%',
+                                maskImage: 'linear-gradient(135deg, transparent 50%, black 50%)',
+                            },];
                         },
-                        rewind: function (intensity) {
+                        options: function (speed) {
+                            return {
+                                duration: speed,
+                                iterations: 1,
+                                easing: 'ease',
+                            };
+                        },
+                        rewind: function () {
+                            this.style.opacity = 0;
                             this.style.maskComposite = 'exclude';
                             this.style.maskRepeat = 'no-repeat';
-                            this.style.maskImage = 'linear-gradient(135deg, transparent 50%, black 50%)';
                             this.style.maskPosition = '100% 100%';
-                            this.style.maskSize = '0% 0%';
                         },
                         play: function () {
-                            this.style.maskSize = '220% 220%';
+                            this.style.opacity = 1;
                         },
                     },
                     'pop-in': {
@@ -1876,7 +1943,7 @@
                         },
                     },
                 },
-                regex: new RegExp('([a-zA-Z0-9\.\,\-\_\"\'\?\!\:\;\#\@\#$\%\&\(\)\{\}]+)', 'g'),
+                regex: new RegExp('([^\\s]+)', 'g'),
                 add: function (selector, settings) {
                     var _this = this,
                         style = settings.style in this.effects ? settings.style : 'fade',
